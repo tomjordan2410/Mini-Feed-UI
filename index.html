@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mini Feed UI</title>
+</head>
+<body>
+    <nav class="navbar" aria-label="Feed controls">
+        <div class="sort-controls">
+            <label for="sortOrder">Sort posts</label>
+            <select id="sortOrder">
+                <option value="newest">Sort by newest</option>
+                <option value="likes">Sort by likes</option>
+            </select>
+        </div>
+
+        <h1 class="Title">Mini Feed Simulator</h1>
+
+        <form class="search-form" role="search">
+            <label class="visually-hidden" for="searchPosts">Search posts by user</label>
+            <input id="searchPosts" class="searchBar" type="search" placeholder="Search by user">
+            <button class="searchUser" type="submit">Search</button>
+        </form>
+    </nav>
+    
+    <div id="newPost">
+        <h2 class="new-post-title">Make a Post</h2>
+        <form>
+            <label for="userName">Username:</label>
+            <input type="text" name="Username" id="userName">
+            <label for="content">Content:</label>
+            <textarea name="Content" id="content" rows="5"></textarea>
+            <input type="submit" value="Post" id="submit">
+        </form>
+    </div>
+    <div id="feed">
+        <p id="emptyFeedMessage" class="empty-feed">No posts yet.</p>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
